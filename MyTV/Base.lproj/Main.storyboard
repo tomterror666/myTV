@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,92 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TVViewController" customModule="MyTV" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-7A-NZa">
+                                <rect key="frame" x="16" y="40" width="288" height="463"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYa-tC-PrB">
+                                <rect key="frame" x="16" y="518" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O43-eH-ILB"/>
+                                    <constraint firstAttribute="width" constant="30" id="ded-to-PVa"/>
+                                </constraints>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="channelUpButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SfG-vg-xqF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iA-4i-kVe">
+                                <rect key="frame" x="92" y="518" width="174" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Pep-OS-Zmc"/>
+                                </constraints>
+                                <state key="normal" title="Channel List"/>
+                                <connections>
+                                    <action selector="channelListButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C3G-2n-wdK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mIn-GJ-Ryf">
+                                <rect key="frame" x="274" y="518" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yZ-61-LJl"/>
+                                    <constraint firstAttribute="width" constant="30" id="98a-bK-BZO"/>
+                                </constraints>
+                                <state key="normal" title="TXT"/>
+                                <connections>
+                                    <action selector="teletextButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U8d-iR-j5j"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4W-Nw-hgm">
+                                <rect key="frame" x="54" y="518" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yn-LD-hgU"/>
+                                    <constraint firstAttribute="width" constant="30" id="JH5-N8-D2x"/>
+                                </constraints>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="channelDownButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zgv-my-zyS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sYa-tC-PrB" secondAttribute="bottom" constant="20" id="4FZ-58-32g"/>
+                            <constraint firstItem="kUd-7A-NZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7jR-aa-GTv"/>
+                            <constraint firstItem="X4W-Nw-hgm" firstAttribute="leading" secondItem="sYa-tC-PrB" secondAttribute="trailing" constant="8" id="98i-CU-IcW"/>
+                            <constraint firstItem="kUd-7A-NZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CcR-DA-peg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIn-GJ-Ryf" secondAttribute="trailing" constant="16" id="Cmc-Qp-laZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUd-7A-NZa" secondAttribute="trailing" constant="16" id="FxR-f4-WqY"/>
+                            <constraint firstItem="sYa-tC-PrB" firstAttribute="top" secondItem="kUd-7A-NZa" secondAttribute="bottom" constant="15" id="Pn0-hz-j0r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X4W-Nw-hgm" secondAttribute="bottom" constant="20" id="S8A-2j-6SV"/>
+                            <constraint firstItem="mIn-GJ-Ryf" firstAttribute="leading" secondItem="6iA-4i-kVe" secondAttribute="trailing" constant="8" id="UaB-pg-pl3"/>
+                            <constraint firstItem="6iA-4i-kVe" firstAttribute="leading" secondItem="X4W-Nw-hgm" secondAttribute="trailing" constant="8" id="ZR0-Dn-z5b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6iA-4i-kVe" secondAttribute="bottom" constant="20" id="eIR-qZ-99G"/>
+                            <constraint firstItem="sYa-tC-PrB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nXj-ov-OjS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mIn-GJ-Ryf" secondAttribute="bottom" constant="20" id="ncB-Us-rnP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="channelDownButton" destination="X4W-Nw-hgm" id="OGb-LU-pdn"/>
+                        <outlet property="channelListButton" destination="6iA-4i-kVe" id="hAV-F3-gKz"/>
+                        <outlet property="channelUpButton" destination="sYa-tC-PrB" id="X94-nu-R21"/>
+                        <outlet property="teletextButton" destination="mIn-GJ-Ryf" id="G5a-Nf-VGG"/>
+                        <outlet property="tvWebView" destination="kUd-7A-NZa" id="uvm-Sc-iRd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="126.7605633802817"/>
         </scene>
     </scenes>
 </document>

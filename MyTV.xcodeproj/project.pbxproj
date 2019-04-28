@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		E86B1B712275CB880031534D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1B702275CB880031534D /* AppDelegate.swift */; };
-		E86B1B732275CB880031534D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1B722275CB880031534D /* ViewController.swift */; };
+		E86B1B732275CB880031534D /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1B722275CB880031534D /* TVViewController.swift */; };
 		E86B1B762275CB880031534D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86B1B742275CB880031534D /* Main.storyboard */; };
 		E86B1B782275CB8A0031534D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86B1B772275CB8A0031534D /* Assets.xcassets */; };
 		E86B1B7B2275CB8A0031534D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86B1B792275CB8A0031534D /* LaunchScreen.storyboard */; };
 		E86B1B862275CB8A0031534D /* MyTVTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1B852275CB8A0031534D /* MyTVTests.swift */; };
 		E86B1B912275CB8A0031534D /* MyTVUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1B902275CB8A0031534D /* MyTVUITests.swift */; };
+		E86B1BA22275D2EF0031534D /* dlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BA12275D2EF0031534D /* dlog.swift */; };
+		E86B1BA52275D8E90031534D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86B1BA42275D8E90031534D /* WebKit.framework */; };
+		E86B1BA72275D9820031534D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BA62275D9820031534D /* Channel.swift */; };
+		E86B1BA92275DB180031534D /* ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BA82275DB180031534D /* ChannelList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		E86B1B6D2275CB880031534D /* MyTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86B1B702275CB880031534D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E86B1B722275CB880031534D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E86B1B722275CB880031534D /* TVViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		E86B1B752275CB880031534D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E86B1B772275CB8A0031534D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E86B1B7A2275CB8A0031534D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		E86B1B8C2275CB8A0031534D /* MyTVUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyTVUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E86B1B902275CB8A0031534D /* MyTVUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTVUITests.swift; sourceTree = "<group>"; };
 		E86B1B922275CB8A0031534D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E86B1BA12275D2EF0031534D /* dlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dlog.swift; sourceTree = "<group>"; };
+		E86B1BA42275D8E90031534D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		E86B1BA62275D9820031534D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		E86B1BA82275DB180031534D /* ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86B1BA52275D8E90031534D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				E86B1B842275CB8A0031534D /* MyTVTests */,
 				E86B1B8F2275CB8A0031534D /* MyTVUITests */,
 				E86B1B6E2275CB880031534D /* Products */,
+				E86B1BA32275D8E90031534D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +107,10 @@
 		E86B1B6F2275CB880031534D /* MyTV */ = {
 			isa = PBXGroup;
 			children = (
+				E86B1BA02275D2B60031534D /* ViewControllers */,
+				E86B1B9F2275D2A80031534D /* Utilities */,
+				E86B1B9E2275D2970031534D /* Models */,
 				E86B1B702275CB880031534D /* AppDelegate.swift */,
-				E86B1B722275CB880031534D /* ViewController.swift */,
 				E86B1B742275CB880031534D /* Main.storyboard */,
 				E86B1B772275CB8A0031534D /* Assets.xcassets */,
 				E86B1B792275CB8A0031534D /* LaunchScreen.storyboard */,
@@ -123,6 +135,39 @@
 				E86B1B922275CB8A0031534D /* Info.plist */,
 			);
 			path = MyTVUITests;
+			sourceTree = "<group>";
+		};
+		E86B1B9E2275D2970031534D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E86B1BA62275D9820031534D /* Channel.swift */,
+				E86B1BA82275DB180031534D /* ChannelList.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E86B1B9F2275D2A80031534D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				E86B1BA12275D2EF0031534D /* dlog.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		E86B1BA02275D2B60031534D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E86B1B722275CB880031534D /* TVViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E86B1BA32275D8E90031534D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E86B1BA42275D8E90031534D /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E86B1B732275CB880031534D /* ViewController.swift in Sources */,
+				E86B1B732275CB880031534D /* TVViewController.swift in Sources */,
+				E86B1BA72275D9820031534D /* Channel.swift in Sources */,
+				E86B1BA22275D2EF0031534D /* dlog.swift in Sources */,
 				E86B1B712275CB880031534D /* AppDelegate.swift in Sources */,
+				E86B1BA92275DB180031534D /* ChannelList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +483,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYGY3245J;
 				INFOPLIST_FILE = MyTV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,6 +502,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYGY3245J;
 				INFOPLIST_FILE = MyTV/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
