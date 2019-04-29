@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 
 class TVViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
+    @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var tvWebView: WKWebView!
     @IBOutlet weak var channelUpButton: UIButton!
     @IBOutlet weak var channelDownButton: UIButton!
@@ -28,6 +29,7 @@ class TVViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     public func load(channel: Channel) {
         let tvRequest = URLRequest(url: URL(string: channel.linkUrlString)!)
         tvWebView.load(tvRequest)
+        headerLabel.text = channel.name
     }
 
     // button handling

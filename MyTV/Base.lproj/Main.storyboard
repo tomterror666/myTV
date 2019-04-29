@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,8 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbs-Fi-haQ">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Vnb-D9-nfO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kUd-7A-NZa">
-                                <rect key="frame" x="16" y="40" width="288" height="463"/>
+                                <rect key="frame" x="16" y="80" width="288" height="423"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -75,7 +83,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sYa-tC-PrB" secondAttribute="bottom" constant="20" id="4FZ-58-32g"/>
                             <constraint firstItem="kUd-7A-NZa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="7jR-aa-GTv"/>
                             <constraint firstItem="X4W-Nw-hgm" firstAttribute="leading" secondItem="sYa-tC-PrB" secondAttribute="trailing" constant="8" id="98i-CU-IcW"/>
-                            <constraint firstItem="kUd-7A-NZa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="CcR-DA-peg"/>
+                            <constraint firstItem="xbs-Fi-haQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Br4-bZ-5C7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mIn-GJ-Ryf" secondAttribute="trailing" constant="16" id="Cmc-Qp-laZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kUd-7A-NZa" secondAttribute="trailing" constant="16" id="FxR-f4-WqY"/>
                             <constraint firstItem="sYa-tC-PrB" firstAttribute="top" secondItem="kUd-7A-NZa" secondAttribute="bottom" constant="15" id="Pn0-hz-j0r"/>
@@ -85,6 +93,9 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6iA-4i-kVe" secondAttribute="bottom" constant="20" id="eIR-qZ-99G"/>
                             <constraint firstItem="sYa-tC-PrB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nXj-ov-OjS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mIn-GJ-Ryf" secondAttribute="bottom" constant="20" id="ncB-Us-rnP"/>
+                            <constraint firstItem="xbs-Fi-haQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="pzR-Mt-lLJ"/>
+                            <constraint firstItem="kUd-7A-NZa" firstAttribute="top" secondItem="xbs-Fi-haQ" secondAttribute="bottom" constant="8" id="xTa-2B-BcN"/>
+                            <constraint firstItem="xbs-Fi-haQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="xcx-sy-U93"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -92,13 +103,14 @@
                         <outlet property="channelDownButton" destination="X4W-Nw-hgm" id="OGb-LU-pdn"/>
                         <outlet property="channelListButton" destination="6iA-4i-kVe" id="hAV-F3-gKz"/>
                         <outlet property="channelUpButton" destination="sYa-tC-PrB" id="X94-nu-R21"/>
+                        <outlet property="headerLabel" destination="xbs-Fi-haQ" id="dPq-pd-fBv"/>
                         <outlet property="teletextButton" destination="mIn-GJ-Ryf" id="G5a-Nf-VGG"/>
                         <outlet property="tvWebView" destination="kUd-7A-NZa" id="uvm-Sc-iRd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="126.7605633802817"/>
+            <point key="canvasLocation" x="-86.25" y="130.98591549295776"/>
         </scene>
     </scenes>
 </document>
