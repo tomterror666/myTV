@@ -50,6 +50,9 @@ class TVViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
     
     @IBAction func channelListButtonTouched(_ sender: Any) {
         DLog("channelListButtonTouched...")
+        
+        let controller = ChannelListViewController(withChannelList: channelList)
+        present(controller, animated: true, completion: nil)
     }
     
     @IBAction func teletextButtonTouched(_ sender: Any) {

@@ -20,6 +20,10 @@ class ChannelList: NSObject {
         set {}
     }
     
+    public var numberOfChannels: Int {
+        return channels.count
+    }
+    
     override init() {
         channels = []
         numberOfCurrentChannel = 0
@@ -76,5 +80,28 @@ class ChannelList: NSObject {
         
         numberOfCurrentChannel -= 1
         return currentChannel
+    }
+    
+    public func getChannel(atIndex index: Int) -> Channel? {
+        guard index < channels.count,
+            index >= 0 else { return nil }
+        
+        numberOfCurrentChannel = index
+        return currentChannel
+    }
+    
+    public func add(_ channel: Channel) {
+        channels.append(channel)
+    }
+    
+    public func delete(channelAt at: Int) {
+        channels.remove(at: at)
+    }
+    
+    public func moveChannel(from fromIndex: Int, to toIndex: Int) {
+        let channelToMove = channels[fromIndex]
+        
+        channels.remove(at: fromIndex)
+        channels.insert(channelToMove, at: toIndex)
     }
 }

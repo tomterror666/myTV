@@ -18,6 +18,10 @@
 		E86B1BA52275D8E90031534D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86B1BA42275D8E90031534D /* WebKit.framework */; };
 		E86B1BA72275D9820031534D /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BA62275D9820031534D /* Channel.swift */; };
 		E86B1BA92275DB180031534D /* ChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BA82275DB180031534D /* ChannelList.swift */; };
+		E86B1BAC227775B70031534D /* ChannelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BAA227775B70031534D /* ChannelListViewController.swift */; };
+		E86B1BAD227775B70031534D /* ChannelListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86B1BAB227775B70031534D /* ChannelListViewController.xib */; };
+		E86B1BB422777BAB0031534D /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86B1BB222777BAB0031534D /* ChannelCell.swift */; };
+		E86B1BB522777BAB0031534D /* ChannelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86B1BB322777BAB0031534D /* ChannelCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,10 @@
 		E86B1BA42275D8E90031534D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E86B1BA62275D9820031534D /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		E86B1BA82275DB180031534D /* ChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelList.swift; sourceTree = "<group>"; };
+		E86B1BAA227775B70031534D /* ChannelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelListViewController.swift; sourceTree = "<group>"; };
+		E86B1BAB227775B70031534D /* ChannelListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelListViewController.xib; sourceTree = "<group>"; };
+		E86B1BB222777BAB0031534D /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		E86B1BB322777BAB0031534D /* ChannelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChannelCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				E86B1B722275CB880031534D /* TVViewController.swift */,
+				E86B1BAA227775B70031534D /* ChannelListViewController.swift */,
+				E86B1BAB227775B70031534D /* ChannelListViewController.xib */,
+				E86B1BB222777BAB0031534D /* ChannelCell.swift */,
+				E86B1BB322777BAB0031534D /* ChannelCell.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -276,7 +288,9 @@
 			files = (
 				E86B1B7B2275CB8A0031534D /* LaunchScreen.storyboard in Resources */,
 				E86B1B782275CB8A0031534D /* Assets.xcassets in Resources */,
+				E86B1BAD227775B70031534D /* ChannelListViewController.xib in Resources */,
 				E86B1B762275CB880031534D /* Main.storyboard in Resources */,
+				E86B1BB522777BAB0031534D /* ChannelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,9 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86B1BAC227775B70031534D /* ChannelListViewController.swift in Sources */,
 				E86B1B732275CB880031534D /* TVViewController.swift in Sources */,
 				E86B1BA72275D9820031534D /* Channel.swift in Sources */,
 				E86B1BA22275D2EF0031534D /* dlog.swift in Sources */,
+				E86B1BB422777BAB0031534D /* ChannelCell.swift in Sources */,
 				E86B1B712275CB880031534D /* AppDelegate.swift in Sources */,
 				E86B1BA92275DB180031534D /* ChannelList.swift in Sources */,
 			);
