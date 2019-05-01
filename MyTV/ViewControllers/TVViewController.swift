@@ -52,7 +52,19 @@ class TVViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         DLog("channelListButtonTouched...")
         
         let controller = ChannelListViewController(withChannelList: channelList)
-        present(controller, animated: true, completion: nil)
+        let navCtl = UINavigationController(rootViewController: controller)
+        navCtl.isNavigationBarHidden = true
+        navCtl.isToolbarHidden = true
+        
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            present(navCtl, animated: true, completion: nil)
+        } else if UIDevice.current.userInterfaceIdiom == .pad {
+            navCtl.modalPresentationStyle = .popover
+            controller.preferredContentSize = CGSize(width: 320.0, height: 568.0)
+            navCtl.popoverPresentationController?.sourceView = view
+            navCtl.popoverPresentationController?.sourceRect = channelListButton.frame
+            present(navCtl, animated: true)
+        }
     }
     
     @IBAction func teletextButtonTouched(_ sender: Any) {
